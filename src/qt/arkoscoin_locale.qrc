@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/arkoscoin_bg.qm</file>
+        <file alias="ca">locale/arkoscoin_ca.qm</file>
+        <file alias="cs">locale/arkoscoin_cs.qm</file>
+        <file alias="da">locale/arkoscoin_da.qm</file>
+        <file alias="de">locale/arkoscoin_de.qm</file>
+        <file alias="en">locale/arkoscoin_en.qm</file>
+        <file alias="en_GB">locale/arkoscoin_en_GB.qm</file>
+        <file alias="en_US">locale/arkoscoin_en_US.qm</file>
+        <file alias="eo">locale/arkoscoin_eo.qm</file>
+        <file alias="es">locale/arkoscoin_es.qm</file>
+        <file alias="es_ES">locale/arkoscoin_es_ES.qm</file>
+        <file alias="fi">locale/arkoscoin_fi.qm</file>
+        <file alias="fr_FR">locale/arkoscoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/arkoscoin_hi_IN.qm</file>
+        <file alias="hr">locale/arkoscoin_hr.qm</file>
+        <file alias="hr_HR">locale/arkoscoin_hr_HR.qm</file>
+        <file alias="it">locale/arkoscoin_it.qm</file>
+        <file alias="ja">locale/arkoscoin_ja.qm</file>
+        <file alias="ko_KR">locale/arkoscoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/arkoscoin_lt_LT.qm</file>
+        <file alias="nl">locale/arkoscoin_nl.qm</file>
+        <file alias="pl">locale/arkoscoin_pl.qm</file>
+        <file alias="pt">locale/arkoscoin_pt.qm</file>
+        <file alias="pt_BR">locale/arkoscoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/arkoscoin_ro_RO.qm</file>
+        <file alias="ru">locale/arkoscoin_ru.qm</file>
+        <file alias="sk">locale/arkoscoin_sk.qm</file>
+        <file alias="sv">locale/arkoscoin_sv.qm</file>
+        <file alias="tr">locale/arkoscoin_tr.qm</file>
+        <file alias="uk">locale/arkoscoin_uk.qm</file>
+        <file alias="vi">locale/arkoscoin_vi.qm</file>
+        <file alias="zh_CN">locale/arkoscoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/arkoscoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

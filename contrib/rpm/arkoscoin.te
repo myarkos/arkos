@@ -1,0 +1,81 @@
+policy_module(arkoscoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type arkoscoin_t;
+type arkoscoin_exec_t;
+init_daemon_domain(arkoscoin_t, arkoscoin_exec_t)
+
+permissive arkoscoin_t;
+
+type arkoscoin_initrc_exec_t;
+init_script_file(arkoscoin_initrc_exec_t)
+
+type arkoscoin_conf_t;
+files_type(arkoscoin_conf_t)
+
+type arkoscoin_var_lib_t;
+files_type(arkoscoin_var_lib_t)
+
+type arkoscoin_var_run_t;
+files_type(arkoscoin_var_run_t)
+
+type arkoscoin_port_t;
+corenet_port(arkoscoin_port_t)
+
+########################################
+#
+# arkoscoin local policy
+#
+allow arkoscoin_t self:process { fork };
+
+allow arkoscoin_t self:fifo_file rw_fifo_file_perms;
+allow arkoscoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(arkoscoin_t, arkoscoin_conf_t, arkoscoin_conf_t)
+manage_files_pattern(arkoscoin_t, arkoscoin_conf_t, arkoscoin_conf_t)
+
+manage_dirs_pattern(arkoscoin_t, arkoscoin_var_lib_t, arkoscoin_var_lib_t)
+manage_files_pattern(arkoscoin_t, arkoscoin_var_lib_t, arkoscoin_var_lib_t)
+files_var_lib_filetrans(arkoscoin_t, arkoscoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(arkoscoin_t, arkoscoin_var_run_t, arkoscoin_var_run_t)
+manage_files_pattern(arkoscoin_t, arkoscoin_var_run_t, arkoscoin_var_run_t)
+
+sysnet_dns_name_resolve(arkoscoin_t)
+corenet_all_recvfrom_unlabeled(arkoscoin_t)
+
+allow arkoscoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(arkoscoin_t)
+corenet_tcp_sendrecv_generic_node(arkoscoin_t)
+corenet_tcp_sendrecv_all_ports(arkoscoin_t)
+corenet_tcp_bind_generic_node(arkoscoin_t)
+
+gen_require(`
+    type arkoscoin_port_t;
+')
+allow arkoscoin_t arkoscoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type arkoscoin_port_t;
+')
+allow arkoscoin_t arkoscoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(arkoscoin_t)
+
+files_read_etc_files(arkoscoin_t)
+
+miscfiles_read_localization(arkoscoin_t)
+
+sysnet_dns_name_resolve(arkoscoin_t)
+
+allow arkoscoin_t arkoscoin_exec_t:file execute_no_trans;
+allow arkoscoin_t self:process setsched;
+corecmd_exec_ls(arkoscoin_t)
+corenet_tcp_connect_http_port(arkoscoin_t)
+dev_read_urand(arkoscoin_t)
+fs_getattr_xattr_fs(arkoscoin_t)
+kernel_read_system_state(arkoscoin_t)

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=ARKOSCOIN Core
+Comment=ARKOSCOIN P2P Cryptocurrency
+Comment[fr]=ARKOSCOIN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ARKOSCOIN, eşten eşe kriptografik sanal para birimi
+Exec=arkoscoin-qt %u
+Terminal=false
+Type=Application
+Icon=arkoscoin128
+MimeType=x-scheme-handler/arkoscoin;
+Categories=Office;Finance;
+StartupWMClass=ARKOSCOIN-qt

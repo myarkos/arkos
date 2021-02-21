@@ -1,0 +1,11 @@
+[Protocol]
+exec=arkoscoin-qt '%u'
+protocol=arkoscoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

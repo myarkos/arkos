@@ -1,0 +1,8 @@
+/usr/bin/arkoscoin-cli		--	gen_context(system_u:object_r:arkoscoin_exec_t,s0)
+/usr/sbin/arkoscoind		--	gen_context(system_u:object_r:arkoscoin_exec_t,s0)
+/usr/lib(64)?/arkoscoin/arkoscoind		--	gen_context(system_u:object_r:arkoscoin_exec_t,s0)
+
+/etc/arkoscoin(/.*)?		gen_context(system_u:object_r:arkoscoin_conf_t,s0)
+/var/lib/arkoscoin(/.*)?		gen_context(system_u:object_r:arkoscoin_var_lib_t,s0)
+
+(/var)?/run/arkoscoind(/.*)?   gen_context(system_u:object_r:arkoscoin_var_run_t,s0)

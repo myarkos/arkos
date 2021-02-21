@@ -1,0 +1,6 @@
+usr/local/bin/arkoscoin-qt usr/bin
+share/pixmaps/arkoscoin32.xpm usr/share/pixmaps
+share/pixmaps/arkoscoin16.xpm usr/share/pixmaps
+share/pixmaps/arkoscoin128.png usr/share/pixmaps
+debian/arkoscoin-qt.desktop usr/share/applications
+debian/arkoscoin-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,3 @@
+usr/local/bin/arkoscoind usr/bin
+usr/local/bin/arkoscoin-cli usr/bin
+debian/examples/arkoscoin.conf etc/arkoscoin
